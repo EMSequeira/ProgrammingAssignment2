@@ -6,6 +6,9 @@
 
 ## Write a short comment describing this function
 
+## This first function will make a new "inverse" matrix which will be called and used
+## in a later function, which will be taking the inverse of the stored matrix.
+
 makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL
     set <- function(y) {
@@ -23,11 +26,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-## This will now solve and print the inverse of the matrix
+## Write a short comment describing this function:
+## This will now solve and print the inverse of the matrix that was
+## previously stored in the function "makeCacheMatrix".
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        ## Return a matrix that is the inverse of inputted 'x'
     inverse <- x$getinverse()
     if(!is.null(inverse)) {
         message("retrieving cached matrix")
